@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/styles/dark.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="images/sky.jpg">
+					<h2>Installing a Countdown Plug-in</h2> <br />
+                    <h4>For any project, it would be beneficial to get your target market to 
+                    anticipate your launching  for some time. A jQuery countdown timer can help 
+                    us to achieve that. It allows us to set the a timer within our webpage 
+                    which counts down till the launching date. At that point, one can also set 
+                    within the script, what it should do once the time is up. You can ask 
+                    it to redirect to the new webpage of you could tell it to pop up a message 
+                    for the user, for example.</h4>
+                    
+				</section>
+				
+                <section>
+                <h2>Installing a Countdown Plug-in</h2> <br />
+                <h4>For this exercise, I used a jQuery plug-in created by Catalin and can be found at;
+<a href="http://devingredients.com/2011/11/building-an-extensible-jquery-countdown-plugin-from-scratch/" target="_blank">Catalin's Website</a></h4>	
+                </section>
+                
+                
+                
+                
+                
+                    <section>
+					<h2>Installing a Countdown Plug-in</h2> <br />
+                    <h4>To set up my workspace, I created my folders;</h4>
+
+
+<h4>and created my HTML5 page (index.htm);</h4>
+<em>[HTML Code View]</em>
+                        <pre>
+                        <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;jQuery Countdown Install and Demonstration&lt;/title&gt;
+
+&lt;/head&gt;
+  
+  
+
+  &lt;body&gt;
+&lt;header&gt;
+    &lt;!-- bootstrap fluid  --&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;div class=&quot;row-fluid&quot;&gt;
+            &lt;div class=&quot;span10 offset1&quot;&gt;
+                &lt;h1 class=&quot;well&quot; &gt;
+                    &lt;a href=&quot;index.htm&quot;&gt;
+                        &lt;img src=&quot;img/logo.png&quot; height=&quot;60&quot; width=&quot;60&quot; alt=&quot;logo&quot;/&gt;
+                    &lt;/a&gt;
+                    jQuery Countdown
+                &lt;/h1&gt;
+                &lt;div&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+                      
+                        
+                        </code>
+                        </pre>
+                    
+				</section>
+				
+				
+				
+	<section>	
+	<h2>Installing a Countdown Plug-in</h2> <br />
+    <h4>To display the timer, I created a div and added markups (spans within unordered lists), one for each unit - Days, Hours, Minutes, Seconds;</h4>		
+				
+				
+	<pre>
+    <code>		
+    
+&lt;!-- TIMER --&gt;
+&lt;div class=&quot;span10 offset1&quot;&gt;
+	&lt;h1&gt; Website Launching Soon&lt;/h1&gt;
+	
+&lt;ul id=&quot;countdown&quot;&gt;
+	&lt;li&gt;
+		&lt;span class=&quot;days&quot;&gt;00&lt;/span&gt;
+		&lt;p class=&quot;timeRefDays&quot;&gt;days&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span class=&quot;hours&quot;&gt;00&lt;/span&gt;
+		&lt;p class=&quot;timeRefHours&quot;&gt;hours&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span class=&quot;minutes&quot;&gt;00&lt;/span&gt;
+		&lt;p class=&quot;timeRefMinutes&quot;&gt;minutes&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span class=&quot;seconds&quot;&gt;00&lt;/span&gt;
+		&lt;p class=&quot;timeRefSeconds&quot;&gt;seconds&lt;/p&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+	&lt;br /&gt;
+	
+	&lt;/div&gt; &lt;!-- End Countdown Timer --&gt;
+				
+				</code>
+                </pre>
+				
+		</section>
+				
+               <section>
+               <h2>Installing a Countdown Plug-in</h2> <br />
+              <h4>  Next, I downloaded the <a href="http://downloads.devingredients.com/files/020/final020/020-final.zip" target="_blank">Countdown Plugin</a> from Catalin's website and followed his instructions on how to get the plugin working on my page. </h4>
+                
+                
+                
+                </section>
+                
+                
+                <section>
+<h2>Installing a Countdown Plug-in</h2> <br />                		
+<h4>I also downloaded and added lines of code to link the HTML file to javascript, the plugin(countdown.js), bootstrap(for css formatting), jquery as well as countdown.css(for styling the page contents)</h4>
+                <em>[JS / CSS inserts Code View]</em>
+                        <pre>
+                        <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;jQuery Countdown Install and Demonstration&lt;/title&gt;
+
+    
+&lt;!-- CSS --&gt;
+&lt;link href=&quot;css/countdown.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+
+&lt;!-- JavaScript --&gt;
+ &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script src=&quot;js/countdown.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    
+	&lt;!-- Bootstrap --&gt;
+    &lt;link href=&quot;http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+	
+
+	
+	
+                      
+                        
+                        </code>
+                        </pre>
+                </section>
+                
+             <section>
+             <h2>Installing a Countdown Plug-in</h2> <br />
+                	<h4>	I called the countdown function and indicated the date and time at which the countdown should end and I also indicated a callback(what the script should do after countdown has finished) using the following script;</h4>
+                 <em>[ Countdown / Callback Code View ]</em>
+                        <pre>
+                        <code>
+&lt;script type=&quot;text/javascript&quot;&gt;
+	$(document).ready(function() {
+	
+		$(&quot;#countdown&quot;).countdown({
+			date: &quot;13 december 2014 20:13:30&quot;, // add the countdown's end date (i.e. 3 november 2012 12:00:00)
+			format: &quot;on&quot; // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
+		},
+		
+		function() { 
+			
+			// the code here will run when the countdown ends
+			//alert(&quot;done!&quot;) 
+			
+			window.location.assign('test_green.htm'); 					
+		});
+	});
+	&lt;/script&gt;
+
+&lt;/head&gt;
+                        
+                        </code>
+                        </pre>
+                </section>
+                
+                
+                <section>
+                 <h2>Installing a Countdown Plug-in</h2> <br />
+                <h4>Once the countdown is complete, it redirects the page to a different page, test_green.htm For the page test_green.htm, I created a dummy page, gave it a green background color(using a line within the css). Within the test_green.htm page, I inserted an alert to test an alternate line of code(in this case a javascript "alert" which says "This green test page indicates successful end of countdown!").</h4>
+                
+                </section>
+                
+                
+                
+                
+                <section>
+                <h2>Installing a Countdown Plug-in</h2> <br />
+                <h4>Final Example Codes</h4>
+                
+                		<em>[index.htm Code View]</em>
+                        <pre>
+                        <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;jQuery Countdown Install and Demonstration&lt;/title&gt;
+
+    
+&lt;!-- CSS --&gt;
+&lt;link href=&quot;css/countdown.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+
+&lt;!-- JavaScript --&gt;
+ &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script src=&quot;js/countdown.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    
+	&lt;!-- Bootstrap --&gt;
+    &lt;link href=&quot;http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+	
+	
+	&lt;script type=&quot;text/javascript&quot;&gt;
+	$(document).ready(function() {
+	
+		$(&quot;#countdown&quot;).countdown({
+			date: &quot;13 december 2014 20:13:30&quot;, // add the countdown's end date (i.e. 3 november 2012 12:00:00)
+			format: &quot;on&quot; // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
+		},
+		
+		function() { 
+			
+			// the code here will run when the countdown ends
+			//alert(&quot;done!&quot;) 
+			
+			window.location.assign('test_green.htm'); 					
+		});
+	});
+	&lt;/script&gt;
+
+&lt;/head&gt;
+  
+  
+
+  &lt;body&gt;
+&lt;header&gt;
+    &lt;!-- bootstrap fluid  --&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;div class=&quot;row-fluid&quot;&gt;
+            &lt;div class=&quot;span10 offset1&quot;&gt;
+                &lt;h1 class=&quot;well&quot; &gt;
+                    &lt;a href=&quot;index.htm&quot;&gt;
+                        &lt;img src=&quot;img/logo.png&quot; height=&quot;60&quot; width=&quot;60&quot; alt=&quot;logo&quot;/&gt;
+                    &lt;/a&gt;
+                    jQuery Countdown
+                &lt;/h1&gt;
+                &lt;div&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;!-- TIMER --&gt;
+&lt;div class=&quot;span10 offset1&quot;&gt;
+	&lt;h1&gt; Website Launching Soon&lt;/h1&gt;
+	
+&lt;ul id=&quot;countdown&quot;&gt;
+	&lt;li&gt;
+		&lt;span class=&quot;days&quot;&gt;00&lt;/span&gt;
+		&lt;p class=&quot;timeRefDays&quot;&gt;days&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span class=&quot;hours&quot;&gt;00&lt;/span&gt;
+		&lt;p class=&quot;timeRefHours&quot;&gt;hours&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span class=&quot;minutes&quot;&gt;00&lt;/span&gt;
+		&lt;p class=&quot;timeRefMinutes&quot;&gt;minutes&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span class=&quot;seconds&quot;&gt;00&lt;/span&gt;
+		&lt;p class=&quot;timeRefSeconds&quot;&gt;seconds&lt;/p&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+	&lt;br /&gt;
+	
+	&lt;/div&gt; &lt;!-- End Countdown Timer --&gt;
+
+	
+
+  &lt;/body&gt;
+&lt;/html&gt;
+                        
+            </code>
+            </pre>
+                        
+                
+                </section>
+                
+                
+                
+                <section>
+                <h2>Installing a Countdown Plug-in</h2> <br />
+                <h4>Final Example Codes</h4>
+                
+                		<em>[test_green.htm Code View]</em>
+                        <pre>
+                        <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;jQuery Countdown Install and Demonstration&lt;/title&gt;
+
+    
+&lt;!-- CSS --&gt;
+&lt;link href=&quot;css/countdown.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+
+&lt;!-- JavaScript --&gt;
+ &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script src=&quot;js/countdown.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+    
+	&lt;!-- Bootstrap --&gt;
+    &lt;link href=&quot;http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+	
+	
+	&lt;script type=&quot;text/javascript&quot;&gt;
+	$(document).ready(function() {
+	
+		$(&quot;#countdown&quot;).countdown({
+			date: &quot;13 december 2014 20:13:30&quot;, // add the countdown's end date (i.e. 3 november 2012 12:00:00)
+			format: &quot;on&quot; // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
+		},
+		
+		function() { 
+			
+			// the code here will run when the countdown ends
+			alert(&quot;This green test page indicates successful end of countdown!&quot;) 
+		
+			
+		});
+	});
+&lt;/script&gt;
+	
+    
+  &lt;/head&gt;
+
+  &lt;body class=&quot;test&quot;&gt;
+&lt;header&gt;
+    &lt;!-- bootstrap fluid  --&gt;
+    &lt;div class=&quot;container-fluid&quot;&gt;
+        &lt;div class=&quot;row-fluid&quot;&gt;
+            &lt;div class=&quot;span10 offset1&quot;&gt;
+                &lt;h1 class=&quot;well&quot; &gt;
+                    &lt;a href=&quot;index.htm&quot;&gt;
+                        &lt;img src=&quot;img/logo.png&quot; height=&quot;60&quot; width=&quot;60&quot; alt=&quot;logo&quot;/&gt;
+                    &lt;/a&gt;
+                    jQuery Countdown
+                &lt;/h1&gt;
+                &lt;div&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;!-- TIMER --&gt;
+&lt;div class=&quot;span10 offset1&quot;&gt;
+	&lt;h1&gt; Website Launching Soon&lt;/h1&gt;
+	
+&lt;ul id=&quot;countdown&quot;&gt;
+	&lt;li&gt;
+		&lt;span class=&quot;days&quot;&gt;00&lt;/span&gt;
+		&lt;p class=&quot;timeRefDays&quot;&gt;days&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span class=&quot;hours&quot;&gt;00&lt;/span&gt;
+		&lt;p class=&quot;timeRefHours&quot;&gt;hours&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span class=&quot;minutes&quot;&gt;00&lt;/span&gt;
+		&lt;p class=&quot;timeRefMinutes&quot;&gt;minutes&lt;/p&gt;
+	&lt;/li&gt;
+	&lt;li&gt;
+		&lt;span class=&quot;seconds&quot;&gt;00&lt;/span&gt;
+		&lt;p class=&quot;timeRefSeconds&quot;&gt;seconds&lt;/p&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+	&lt;br /&gt;
+	
+	&lt;/div&gt; &lt;!-- End Countdown Timer --&gt;
+
+	
+
+  &lt;/body&gt;
+&lt;/html&gt;   
+                        
+            </code>
+            </pre>
+                        
+                
+                </section>
+                
+                
+                      <section>
+                <h2>Installing a Countdown Plug-in</h2> <br />
+                <h4>Final Example Codes</h4>
+                
+                		<em>[countdown.css Code View]</em>
+                        <pre>
+                        <code>          
+                ul#countdown {
+	margin: 10px auto;
+	padding: 0;
+}
+ul#countdown li{
+	background-color: #333;
+	border: 2px solid #fff;
+	color: #fff;
+	display: inline;
+	float: left;
+	font: normal bold 36px Arial;
+	letter-spacing: 5px;
+	margin-left: 5px;
+	text-align: center;
+	width: 60px;
+	border-radius: 6px;
+	box-shadow: 0 0 3px #777;
+}
+ul#countdown span {
+	padding-left: 5px;
+}
+ul#countdown  p.timeRefDays, ul#countdown  p.timeRefHours, ul#countdown  p.timeRefMinutes, ul#countdown  p.timeRefSeconds{
+	font: normal normal 12px Arial;
+	letter-spacing: 0;
+	margin: 0;
+	padding-bottom: 5px;
+}
+
+.test {
+background-color: #006600;
+}
+                
+                	
+ </code>
+    </pre>
+        
+        </section>
+                
+           
+           
+           
+                 <section>
+                <h2>Installing a Countdown Plug-in</h2> <br />
+                <h4>Final Example Codes</h4>
+                
+                		<em>[countdown.js Code View]</em>
+                        <pre>
+                        <code>          
+                /**********************************
+jQuery Countdown Script v0.1 (beta)
+Website: http://devingredients.com
+Author: Catalin Berta
+
+Article: http://devingredients.com/2011/11/building-an-extensible-jquery-countdown-plugin-from-scratch/
+Download link: http://devingredients.com/files/020/final020/020-final.zip 
+**********************************/
+
+(function($) {
+	$.fn.countdown = function(options, callback) {
+
+		//custom 'this' selector
+		var thisEl = $(this);
+
+		//array of custom settings
+		var settings = { 
+			'date': null,
+			'format': null
+		};
+
+		//append the settings array to options
+		if(options) {
+			$.extend(settings, options);
+		}
+		
+		//main countdown function
+		function countdown_proc() {
+			
+			var eventDate = Date.parse(settings['date']) / 1000;
+			var currentDate = Math.floor($.now() / 1000);
+			
+			if(eventDate <= currentDate) {
+				callback.call(this);
+				clearInterval(interval);
+			}
+			
+			var seconds = eventDate - currentDate;
+			
+			var days = Math.floor(seconds / (60 * 60 * 24)); //calculate the number of days
+			seconds -= days * 60 * 60 * 24; //update the seconds variable with no. of days removed
+			
+			var hours = Math.floor(seconds / (60 * 60));
+			seconds -= hours * 60 * 60; //update the seconds variable with no. of hours removed
+			
+			var minutes = Math.floor(seconds / 60);
+			seconds -= minutes * 60; //update the seconds variable with no. of minutes removed
+			
+			//conditional Ss
+			if (days == 1) { thisEl.find(".timeRefDays").text("day"); } else { thisEl.find(".timeRefDays").text("days"); }
+			if (hours == 1) { thisEl.find(".timeRefHours").text("hour"); } else { thisEl.find(".timeRefHours").text("hours"); }
+			if (minutes == 1) { thisEl.find(".timeRefMinutes").text("minute"); } else { thisEl.find(".timeRefMinutes").text("minutes"); }
+			if (seconds == 1) { thisEl.find(".timeRefSeconds").text("second"); } else { thisEl.find(".timeRefSeconds").text("seconds"); }
+			
+			//logic for the two_digits ON setting
+			if(settings['format'] == "on") {
+				days = (String(days).length >= 2) ? days : "0" + days;
+				hours = (String(hours).length >= 2) ? hours : "0" + hours;
+				minutes = (String(minutes).length >= 2) ? minutes : "0" + minutes;
+				seconds = (String(seconds).length >= 2) ? seconds : "0" + seconds;
+			}
+			
+			//update the countdown's html values.
+			if(!isNaN(eventDate)) {
+				thisEl.find(".days").text(days);
+				thisEl.find(".hours").text(hours);
+				thisEl.find(".minutes").text(minutes);
+				thisEl.find(".seconds").text(seconds);
+			} else { 
+				alert("Invalid date. Here's an example: 12 Tuesday 2012 17:30:00");
+				clearInterval(interval); 
+			}
+		}
+		
+		//run the function
+		countdown_proc();
+		
+		//loop the function
+		interval = setInterval(countdown_proc, 1000);
+		
+	}
+}) (jQuery);
+                
+                	
+ </code>
+    </pre>
+        
+        </section>
+           
+           
+           
+                
+                
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme || 'night', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
